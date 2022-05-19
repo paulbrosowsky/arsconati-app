@@ -1,9 +1,4 @@
-<script setup>
-import TheWelcome from '@/components/TheWelcome.vue'
-</script>
-
+<script setup></script>
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="flex h-screen w-screen items-center justify-center">Home</div>
 </template>
