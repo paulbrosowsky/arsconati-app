@@ -21,7 +21,7 @@ function openExhibit() {
     >
       <img class="object-cover" :src="exhibit.image" alt="" />
       <div
-        class="z-8 absolute left-3/4 top-1.5 h-8 w-8 rounded-full bg-amber-500 px-2 py-2 text-xs font-bold text-white shadow-sm"
+        class="absolute left-3/4 top-1.5 z-10 h-8 w-8 rounded-full bg-amber-500 px-2 py-2 text-xs font-bold text-white shadow-sm"
       >
         {{ exhibit.searchIndex }}
       </div>

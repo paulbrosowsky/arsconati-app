@@ -8,6 +8,7 @@ defineProps({
 </script>
 <template>
   <div class="aspect-w-1 relative -mb-5 h-[500px] w-full">
+    <slot name="searchIndex"></slot>
     <img class="object-cover" :src="bgImage" alt="" />
     <div class="relative">
       <div
@@ -22,7 +23,9 @@ defineProps({
   </div>
 
   <div class="relative z-10 rounded-3xl bg-white pt-16 pb-32">
-    <nav class="absolute -top-5 right-6"><slot name="nav"></slot></nav>
+    <nav class="absolute -top-5 right-6">
+      <slot name="nav"></slot>
+    </nav>
     <slot></slot>
   </div>
 </template>

@@ -44,7 +44,7 @@ const exhibits = [
   {
     image: '/images/napoleon.jpeg',
     searchIndex: '08',
-    title: 'Napoleons Zimmer',
+    title: 'Napoleon Bonaparte',
   },
   {
     image: '/images/gusaren.jpeg',
