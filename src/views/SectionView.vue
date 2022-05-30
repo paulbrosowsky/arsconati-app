@@ -74,11 +74,13 @@ const exhibits = [
     </template>
 
     <section class="mb-16 px-4">
-      <h2 class="mb-5 text-center font-heading text-2xl">Frühmittelalter</h2>
+      <h2 class="mb-5 text-center font-heading text-2xl font-medium">
+        Frühmittelalter
+      </h2>
       <h4 class="mb-5 text-center font-heading">
         Mitte 6. Jahrhundert bis ca. 1050
       </h4>
-      <p>
+      <p class="text-sm">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         nesciunt dolorum repellat, aperiam eaque repudiandae deleniti et
         accusantium saepe quas distinctio ad, iure ut adipisci mollitia corrupti
@@ -100,7 +102,7 @@ const exhibits = [
       <h4 class="mb-5 text-center font-heading">
         13. bis Anfang 16. Jahrhundert
       </h4>
-      <p>
+      <p class="text-sm">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         nesciunt dolorum repellat, aperiam eaque repudiandae deleniti et
         accusantium saepe quas distinctio ad, iure ut adipisci mollitia corrupti

@@ -26,7 +26,7 @@ function openExhibit() {
         {{ exhibit.searchIndex }}
       </div>
     </div>
-    <h4 class="mt-3 text-center font-heading leading-tight">
+    <h4 class="mt-3 text-center font-heading text-sm font-medium leading-tight">
       {{ exhibit.title }}
     </h4>
   </div>

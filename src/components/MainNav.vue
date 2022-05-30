@@ -2,11 +2,11 @@
 import { RouterLink } from 'vue-router'
 </script>
 <template>
-  <nav class="w-full p-4">
-    <ul class="relative flex justify-between rounded-2xl bg-gray-100 shadow-lg">
+  <nav class="w-full px-2 py-4">
+    <ul class="relative flex justify-between">
       <RouterLink
         :to="{ name: 'guide' }"
-        class="absolute left-0 right-0 z-10 -my-1 mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-2xl bg-red-600 p-5 text-center text-white shadow shadow-red-700"
+        class="absolute left-0 right-0 -bottom-2 z-10 mx-auto flex h-[64px] w-[64px] items-center justify-center rounded-full bg-red-600 text-center text-white shadow-md"
       >
         <svg
           class="ml-1 h-6 w-6 fill-current"
@@ -17,16 +17,17 @@ import { RouterLink } from 'vue-router'
         >
           <path fill="none" d="M0 0h24v24H0z" />
           <path
-            d="M4.965 5.096l3.546 12.41 3.04-6.08 5.637-2.255L4.965 5.096zM2.899 2.3l18.806 6.268a.5.5 0 0 1 .028.939L13 13l-4.425 8.85a.5.5 0 0 1-.928-.086L2.26 2.911A.5.5 0 0 1 2.9 2.3z"
+            d="M2.9 2.3l18.805 6.268a.5.5 0 0 1 .028.939L13 13l-4.425 8.85a.5.5 0 0 1-.928-.086L2.26 2.911A.5.5 0 0 1 2.9 2.3z"
           />
         </svg>
       </RouterLink>
-      <li class="w-full">
+      <li class="w-full pl-4">
         <RouterLink
-          class="flex w-full justify-center py-5"
+          class="flex w-full justify-center rounded-xl bg-gray-100 py-3 shadow-md"
           :to="{ name: 'home' }"
         >
           <svg
+            class="h-6 w-6 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             width="24"
@@ -40,9 +41,9 @@ import { RouterLink } from 'vue-router'
         </RouterLink>
       </li>
       <li class="relative w-2/3"></li>
-      <li class="w-full">
+      <li class="w-full pr-4">
         <RouterLink
-          class="flex w-full justify-center py-5"
+          class="flex w-full justify-center rounded-xl bg-gray-100 py-3 shadow-md"
           :to="{ name: 'search' }"
         >
           <svg

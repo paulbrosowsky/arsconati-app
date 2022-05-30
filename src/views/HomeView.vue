@@ -62,9 +62,11 @@ const exhibits = [
     </template>
 
     <section class="mb-16 px-4">
-      <h2 class="mb-5 text-center font-heading text-2xl">ARS CONATI</h2>
+      <h2 class="mb-5 text-center font-heading text-2xl font-medium">
+        ARS CONATI
+      </h2>
       <h4 class="mb-5 text-center font-heading">Kunst, Kultur, Geschichte</h4>
-      <p>
+      <p class="text-sm">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         nesciunt dolorum repellat, aperiam eaque repudiandae deleniti et
         accusantium saepe quas distinctio ad, iure ut adipisci mollitia corrupti
@@ -73,7 +75,7 @@ const exhibits = [
     </section>
 
     <section class="my-10 bg-neutral-100 py-10 px-4">
-      <h2 class="mb-5 text-center font-heading text-2xl">
+      <h2 class="mb-5 text-center font-heading text-2xl font-medium">
         Aussellungsbereiche
       </h2>
       <h4 class="mb-10 text-center font-heading">
@@ -90,7 +92,9 @@ const exhibits = [
     </section>
 
     <section class="my-16 px-4">
-      <h2 class="mb-5 text-center font-heading text-2xl">Wichtige Exponate</h2>
+      <h2 class="mb-5 text-center font-heading text-2xl font-medium">
+        Wichtige Exponate
+      </h2>
       <h4 class="mb-10 text-center font-heading">
         Erfahren Sie mehr über unsere interessanteste Stücke. Es lohnt sich!
       </h4>
