@@ -3,6 +3,8 @@ import WelcomeView from '@/views/WelcomeView.vue'
 import GuideView from '@/views/GuideView.vue'
 import SearchView from '@/views/SearchView.vue'
 import HomeView from '@/views/HomeView.vue'
+import SectionView from '@/views/SectionView.vue'
+import ExhibitView from '@/views/ExhibitView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,7 +29,21 @@ const router = createRouter({
       name: 'about',
       component: WelcomeView,
     },
+    {
+      path: '/sections/:id',
+      name: 'section',
+      component: SectionView,
+    },
+    {
+      path: '/exhibit/:id',
+      name: 'exhibit',
+      component: ExhibitView,
+    },
   ],
+})
+
+router.beforeEach((to, from) => {
+  window.scrollTo(0, 0)
 })
 
 export default router

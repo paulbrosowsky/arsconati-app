@@ -3,10 +3,10 @@ import { RouterLink } from 'vue-router'
 </script>
 <template>
   <nav class="w-full p-4">
-    <ul class="relative flex justify-between rounded-2xl bg-white shadow-lg">
+    <ul class="relative flex justify-between rounded-2xl bg-gray-100 shadow-lg">
       <RouterLink
         :to="{ name: 'guide' }"
-        class="absolute left-0 right-0 z-10 -my-1 mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-2xl bg-indigo-700 p-5 text-center text-white shadow shadow-indigo-700"
+        class="absolute left-0 right-0 z-10 -my-1 mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-2xl bg-red-600 p-5 text-center text-white shadow shadow-red-700"
       >
         <svg
           class="ml-1 h-6 w-6 fill-current"
