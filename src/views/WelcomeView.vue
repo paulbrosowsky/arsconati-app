@@ -2,7 +2,7 @@
 import PageLayout from '@/components/PageLayout.vue'
 </script>
 <template>
-  <PageLayout bg-image="src/assets/images/welcome-background.jpeg">
+  <PageLayout bg-image="/images/welcome-background.jpeg">
     <template #title>Herzlich Willkommen</template>
     <template #subtitle>
       in die Welt der Kunst, Kultur und Geschichte!

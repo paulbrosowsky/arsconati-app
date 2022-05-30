@@ -4,34 +4,34 @@ import ExhibitCard from '@/components/ExhibitCard.vue'
 
 const exhibits = [
   {
-    image: '../src/assets/images/tutankhamun.jpeg',
+    image: '/images/tutankhamun.jpeg',
     searchIndex: '22',
     title: 'Tutankhamun Maske',
   },
   {
-    image: '../src/assets/images/lanzelot.jpeg',
+    image: '/images/lanzelot.jpeg',
     searchIndex: '14',
     title: 'Turnierrüstung',
   },
   {
-    image: '../src/assets/images/samurai.jpeg',
+    image: '/images/samurai.jpeg',
     searchIndex: '03',
     title: 'Samurai-Rüstungen',
   },
   {
-    image: '../src/assets/images/napoleon.jpeg',
+    image: '/images/napoleon.jpeg',
     searchIndex: '08',
     title: 'Napoleons Zimmer',
   },
   {
-    image: '../src/assets/images/gusaren.jpeg',
+    image: '/images/gusaren.jpeg',
     searchIndex: '23',
     title: 'Gusaren-Uniform',
   },
 ]
 </script>
 <template>
-  <PageLayout bg-image="../src/assets/images/mittelalter.jpeg">
+  <PageLayout bg-image="/images/mittelalter.jpeg">
     <template #title>Mittelalter</template>
     <template #subtitle>
       Europäisches Mittelalter, Ritter Rüstungen, 30-jähriger Krieg

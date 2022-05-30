@@ -5,19 +5,19 @@ import ExhibitCard from '@/components/ExhibitCard.vue'
 
 const sections = [
   {
-    image: 'src/assets/images/vorgeschichte.jpeg',
+    image: '/images/vorgeschichte.jpeg',
     title: 'Urzeit',
     subtitle: 'vor 400 Mio. - 300.000 Jahre',
     description: 'Fosilien von der ersten Tieren und Eszeitbewohner',
   },
   {
-    image: 'src/assets/images/altertum.jpeg',
+    image: '/images/altertum.jpeg',
     title: 'Altertum',
     subtitle: '2.500 v. Chr. - 600 n. Chr',
     description: 'Altes Ägypten, Antikes Grichenland, Römisches Reich',
   },
   {
-    image: 'src/assets/images/mittelalter.jpeg',
+    image: '/images/mittelalter.jpeg',
     title: 'Mittelalter',
     subtitle: '2.500 v. Chr. - 600 n. Chr',
     description:
@@ -27,34 +27,34 @@ const sections = [
 
 const exhibits = [
   {
-    image: 'src/assets/images/tutankhamun.jpeg',
+    image: '/images/tutankhamun.jpeg',
     searchIndex: '22',
     title: 'Tutankhamun Maske',
   },
   {
-    image: 'src/assets/images/lanzelot.jpeg',
+    image: '/images/lanzelot.jpeg',
     searchIndex: '14',
     title: 'Turnierrüstung',
   },
   {
-    image: 'src/assets/images/samurai.jpeg',
+    image: '/images/samurai.jpeg',
     searchIndex: '03',
     title: 'Samurai-Rüstungen',
   },
   {
-    image: 'src/assets/images/napoleon.jpeg',
+    image: '/images/napoleon.jpeg',
     searchIndex: '08',
     title: 'Napoleons Zimmer',
   },
   {
-    image: 'src/assets/images/gusaren.jpeg',
+    image: '/images/gusaren.jpeg',
     searchIndex: '23',
     title: 'Gusaren-Uniform',
   },
 ]
 </script>
 <template>
-  <PageLayout bg-image="src/assets/images/home-background.jpeg">
+  <PageLayout bg-image="/images/home-background.jpeg">
     <template #title>Übersicht</template>
     <template #subtitle>
       Hier finden Sie eine Übersicht über alle unsere Ausstellungsbereiche und
