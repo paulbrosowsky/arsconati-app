@@ -18,7 +18,7 @@ const router = createRouter({
       path: '/guide',
       name: 'guide',
       component: GuideView,
-      redirect: { name: 'section', params: { id: 1 } },
+      // redirect: { name: 'section', params: { id: 1 } },
     },
     {
       path: '/search',

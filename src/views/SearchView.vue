@@ -7,7 +7,7 @@
       Suche Sie was bestimmtes?
     </h2>
     <h4 class="mb-10 text-center text-sm">
-      Geben Sie die Nummer von dem Exponet ein, von dem Sie mehr erfaren wollen.
+      Geben Sie die Nummer von dem Exponat ein, von dem Sie mehr erfaren wollen.
     </h4>
 
     <form
