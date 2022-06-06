@@ -1,6 +1,10 @@
 <script setup>
+import { onBeforeUnmount, onMounted } from 'vue'
 import PageLayout from '@/components/PageLayout.vue'
 import ExhibitCard from '@/components/ExhibitCard.vue'
+import { useGuideStore } from '@/stores/guideStore'
+
+const store = useGuideStore
 
 const exhibits = [
   {

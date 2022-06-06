@@ -3,7 +3,6 @@ import WelcomeView from '@/views/WelcomeView.vue'
 import GuideView from '@/views/GuideView.vue'
 import SearchView from '@/views/SearchView.vue'
 import HomeView from '@/views/HomeView.vue'
-import SectionView from '@/views/SectionView.vue'
 import ExhibitView from '@/views/ExhibitView.vue'
 
 const router = createRouter({
@@ -29,11 +28,6 @@ const router = createRouter({
       path: '/welcome',
       name: 'about',
       component: WelcomeView,
-    },
-    {
-      path: '/sections/:id',
-      name: 'section',
-      component: SectionView,
     },
     {
       path: '/exhibit/:id',
