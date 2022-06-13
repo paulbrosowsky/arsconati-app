@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-defineProps({
+const props = defineProps({
   exhibit: {
     type: Object,
     required: true,
@@ -11,7 +11,7 @@ defineProps({
 })
 
 function openExhibit() {
-  router.push({ name: 'exhibit', params: { id: 1 } })
+  router.push({ name: 'exhibit', params: { id: props.exhibit.id } })
 }
 </script>
 <template>
@@ -19,7 +19,7 @@ function openExhibit() {
     <div
       class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-2xl shadow-lg"
     >
-      <img class="object-cover" :src="exhibit.image" alt="" />
+      <img class="object-cover" :src="exhibit.titleImage" alt="" />
       <div
         class="absolute left-3/4 top-1.5 z-10 h-8 w-8 rounded-full bg-amber-500 px-2 py-2 text-xs font-bold text-white shadow-sm"
       >

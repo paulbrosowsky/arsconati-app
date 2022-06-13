@@ -2,7 +2,7 @@
 defineProps({
   bgImage: {
     type: String,
-    required: true,
+    default: '',
   },
 })
 </script>
@@ -22,7 +22,7 @@ defineProps({
     </div>
   </div>
 
-  <div class="relative z-10 rounded-3xl bg-white pt-16 pb-32">
+  <div class="relative z-10 rounded-3xl bg-white pt-6 pb-32">
     <nav class="absolute -top-5 right-6">
       <slot name="nav"></slot>
     </nav>

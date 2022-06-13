@@ -8,6 +8,9 @@ const store = useGuideStore()
 
 onMounted(() => {
   store.fetchSections()
+  store.fetchExhibits()
+
+  store.restoreStep()
 })
 </script>
 

@@ -4,7 +4,10 @@ const exhibitFiles = import.meta.glob('./exhibits/*.json')
 export async function getSections() {
   return await getData(sectionFiles)
 }
-export const exhibits = getData(exhibitFiles)
+
+export async function getExhibits() {
+  return await getData(exhibitFiles)
+}
 
 async function getData(files) {
   const returnData = []
