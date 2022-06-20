@@ -24,25 +24,26 @@ export const useGuideStore = defineStore('guide', {
   },
 
   actions: {
+    setLoading() {
+      this.loading = true
+      setTimeout(() => (this.loading = false), 2500)
+    },
+
     incrementStep() {
       if (this.currentStep < this.sections.length) {
-        this.loading = true
+        this.setLoading()
         this.currentStep++
 
         localStorage.setItem('currentStep', this.currentStep)
-
-        setTimeout(() => (this.loading = false), 2500)
       }
     },
 
     decrementStep() {
       if (this.currentStep > 1) {
-        this.loading = true
+        this.setLoading()
         this.currentStep--
 
         localStorage.setItem('currentStep', this.currentStep)
-
-        setTimeout(() => (this.loading = false), 2500)
       }
     },
 
@@ -54,15 +55,13 @@ export const useGuideStore = defineStore('guide', {
     },
 
     async fetchSections() {
-      this.loading = true
+      this.setLoading()
       this.sections = await getSections()
-      setTimeout(() => (this.loading = false), 2500)
     },
 
     async fetchExhibits() {
-      this.loading = true
+      this.setLoading()
       this.exhibits = await getExhibits()
-      setTimeout(() => (this.loading = false), 2500)
     },
   },
 })

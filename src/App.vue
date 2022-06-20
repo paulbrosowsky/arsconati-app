@@ -37,7 +37,7 @@ onMounted(() => {
         <p class="mt-5 text-center">Inhalte werden geladen ...</p>
       </section>
       <Transition
-        v-if="!store.loading"
+        v-else
         enter-active-class="duration-3000 ease-out"
         enter-from-class="transform opacity-0"
         enter-to-class="opacity-100"

@@ -17,9 +17,9 @@
       <input
         class="w-20 overflow-hidden rounded-xl border-4 border-white bg-gray-100 py-5 px-5 text-center text-2xl font-semibold leading-none shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
         type="number"
+        size="2"
         placeholder="00"
-        min="0"
-        max="99"
+        maxlength="2"
       />
       <button
         class="mt-10 rounded-xl bg-amber-500 px-5 py-3 text-sm font-semibold uppercase text-white shadow-lg shadow-amber-200 focus:outline-none"

@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, nextTick, onBeforeMount, onMounted } from 'vue'
 import { useGuideStore } from '@/stores/guideStore'
 import PageLayout from '@/components/PageLayout.vue'
 import ExhibitCard from '@/components/ExhibitCard.vue'
