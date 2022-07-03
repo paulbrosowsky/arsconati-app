@@ -1,12 +1,12 @@
 import { defineStore } from 'pinia'
-import { getSections, getExhibits } from '../data'
+import { getHistorySections, getExhibits } from '../data'
+import { useStore } from '@/stores/mainStore'
 
-export const useGuideStore = defineStore('guide', {
+export const useHistoryStore = defineStore('history', {
   state: () => ({
     currentStep: 1,
     sections: [],
     exhibits: [],
-    loading: false,
   }),
 
   getters: {
@@ -24,14 +24,10 @@ export const useGuideStore = defineStore('guide', {
   },
 
   actions: {
-    setLoading() {
-      this.loading = true
-      setTimeout(() => (this.loading = false), 2500)
-    },
-
     incrementStep() {
       if (this.currentStep < this.sections.length) {
-        this.setLoading()
+        const mainStore = useStore()
+        mainStore.setLoading()
         this.currentStep++
 
         localStorage.setItem('currentStep', this.currentStep)
@@ -40,7 +36,8 @@ export const useGuideStore = defineStore('guide', {
 
     decrementStep() {
       if (this.currentStep > 1) {
-        this.setLoading()
+        const mainStore = useStore()
+        mainStore.setLoading()
         this.currentStep--
 
         localStorage.setItem('currentStep', this.currentStep)
@@ -55,12 +52,14 @@ export const useGuideStore = defineStore('guide', {
     },
 
     async fetchSections() {
-      this.setLoading()
-      this.sections = await getSections()
+      const mainStore = useStore()
+      mainStore.setLoading()
+      this.sections = await getHistorySections()
     },
 
     async fetchExhibits() {
-      this.setLoading()
+      const mainStore = useStore()
+      mainStore.setLoading()
       this.exhibits = await getExhibits()
     },
   },

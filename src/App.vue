@@ -1,16 +1,22 @@
 <script setup>
-import { RouterView } from 'vue-router'
-import MainNav from '@/components/MainNav.vue'
 import { onMounted } from 'vue'
-import { useGuideStore } from '@/stores/guideStore'
+import { RouterView } from 'vue-router'
+import { useStore } from '@/stores/mainStore'
+import { useHistoryStore } from '@/stores/historyStore'
+import { useArtStore } from '@/stores/artStore'
+import MainNav from '@/components/MainNav.vue'
 
-const store = useGuideStore()
+const store = useStore()
+const historyStore = useHistoryStore()
+const artStore = useArtStore()
 
 onMounted(() => {
-  store.fetchSections()
-  store.fetchExhibits()
+  historyStore.fetchSections()
+  historyStore.fetchExhibits()
+  historyStore.restoreStep()
 
-  store.restoreStep()
+  artStore.fetchSections()
+  artStore.restoreStep()
 })
 </script>
 

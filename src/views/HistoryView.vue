@@ -1,11 +1,11 @@
 <script setup>
 import { computed, nextTick, onBeforeMount, onMounted } from 'vue'
-import { useGuideStore } from '@/stores/guideStore'
+import { useHistoryStore } from '@/stores/historyStore'
 import PageLayout from '@/components/PageLayout.vue'
 import ExhibitCard from '@/components/ExhibitCard.vue'
 import ContentText from '@/components/ContentText.vue'
 
-const store = useGuideStore()
+const store = useHistoryStore()
 
 const section = computed(() => store.currentSection())
 </script>
@@ -37,7 +37,22 @@ const section = computed(() => store.currentSection())
       </div>
     </template> -->
 
-    <ContentText :content="store.currentSection?.body" />
+    <section
+      class="mt-10"
+      v-for="(content, index) in store.currentSection?.contents"
+      :key="index"
+    >
+      <div
+        v-if="content?.images"
+        v-for="(image, index) in content?.images"
+        :key="index"
+        class="mt-10 p-10 first:mt-0"
+      >
+        <img class="rounded-xl shadow-lg" :src="image" />
+      </div>
+
+      <ContentText class="mb-10" :content="content?.body" />
+    </section>
 
     <section
       class="mt-10 bg-gray-100 px-4 py-10"

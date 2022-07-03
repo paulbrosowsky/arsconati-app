@@ -1,12 +1,12 @@
 <script setup>
 import { computed } from 'vue'
-import { useGuideStore } from '@/stores/guideStore'
+import { useHistoryStore } from '@/stores/historyStore'
 import { useRoute } from 'vue-router'
 import PageLayout from '@/components/PageLayout.vue'
 import ExhibitCard from '@/components/ExhibitCard.vue'
 import ContentText from '@/components/ContentText.vue'
 
-const store = useGuideStore()
+const store = useHistoryStore()
 const route = useRoute()
 
 const exhibit = computed(() => {
@@ -31,7 +31,7 @@ const proposals = computed(() => {
     <template #title>{{ exhibit.title }}</template>
     <template #subtitle>{{ exhibit.subtitle }}</template>
 
-    <ContentText :content="store.currentSection?.body" />
+    <ContentText :content="exhibit.body" />
 
     <section class="mt-10 bg-gray-100 px-4 py-10" v-if="proposals.length">
       <h2 class="mb-5 text-center font-heading text-2xl font-medium">

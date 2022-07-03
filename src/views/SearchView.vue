@@ -1,32 +1,48 @@
-<script setup></script>
+<script setup>
+import { ref, computed } from 'vue'
+import { useDraggable } from '@vueuse/core'
+
+const draggable = ref(null)
+const screen = ref(null)
+const angle = ref(0)
+
+const center = computed(() => {
+  return {
+    x: screen.value.offsetWidth / 2,
+    y: screen.value.offsetHeight / 2,
+  }
+})
+
+const { x, y, style } = useDraggable(draggable, {
+  onStart: (position, event) => {
+    console.log(getAngle(event))
+  },
+  onMove: (position, event) => {
+    getAngle(event)
+  },
+})
+
+function getAngle(event) {
+  console.log(center.value.y - event.y, center.value.x - event.x)
+  const startAngle = angle.value
+  const endAngle = Math.atan2(
+    center.value.y - event.y,
+    center.value.x - event.x
+  )
+  setTimeout(() => {
+    angle.value = endAngle - startAngle
+  }, 300)
+}
+</script>
 <template>
   <section
+    ref="screen"
     class="flex h-screen w-screen flex-col items-center justify-center px-10"
   >
-    <h2 class="mb-5 text-center font-heading text-2xl font-medium">
-      Suche Sie was bestimmtes?
-    </h2>
-    <h4 class="mb-10 text-center text-sm">
-      Geben Sie die Nummer von dem Exponat ein, von dem Sie mehr erfaren wollen.
-    </h4>
-
-    <form
-      class="flex flex-col items-center"
-      @submit.prevent="$router.push({ name: 'exhibit', params: { id: 1 } })"
-    >
-      <input
-        class="w-20 overflow-hidden rounded-xl border-4 border-white bg-gray-100 py-5 px-5 text-center text-2xl font-semibold leading-none shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-        type="number"
-        size="2"
-        placeholder="00"
-        maxlength="2"
-      />
-      <button
-        class="mt-10 rounded-xl bg-amber-500 px-5 py-3 text-sm font-semibold uppercase text-white shadow-lg shadow-amber-200 focus:outline-none"
-        type="submit"
-      >
-        Exponat suchen
-      </button>
-    </form>
+    <div
+      ref="draggable"
+      class="fixed h-[20px] w-[20px] rounded-full bg-red-500"
+      :style="`transform: rotate(${angle}rad) translateY(-100px);`"
+    ></div>
   </section>
 </template>

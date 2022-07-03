@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import WelcomeView from '@/views/WelcomeView.vue'
-import GuideView from '@/views/GuideView.vue'
+import ArtView from '@/views/ArtView.vue'
+import HistoryView from '@/views/HistoryView.vue'
 import SearchView from '@/views/SearchView.vue'
 import HomeView from '@/views/HomeView.vue'
 import ExhibitView from '@/views/ExhibitView.vue'
@@ -14,21 +14,20 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/guide',
-      name: 'guide',
-      component: GuideView,
-      // redirect: { name: 'section', params: { id: 1 } },
+      path: '/history',
+      name: 'history',
+      component: HistoryView,
     },
     {
-      path: '/search',
-      name: 'search',
-      component: SearchView,
+      path: '/art',
+      name: 'art',
+      component: ArtView,
     },
-    {
-      path: '/welcome',
-      name: 'about',
-      component: WelcomeView,
-    },
+    // {
+    //   path: '/search',
+    //   name: 'search',
+    //   component: SearchView,
+    // },
     {
       path: '/exhibit/:id',
       name: 'exhibit',

@@ -1,0 +1,14 @@
+{
+    "id": 20, 
+    "step": 4,
+    "title": "Antikes Griechenland",
+    "subtitle": "Mutterland der Demokratie- Fundament für das Abendland",
+    "titleImage": "/images/geschichte_griechenland.jpg",
+    "audio": "",
+    "contents": [
+        { 
+            "body": "<h2>Etablierung ca 800 v. Chr...</h2>\n<p>\nDas antike Griechenland umfasst einen Zeitraum von 800 v. Chr bis zur\nEinbeziehung des letzten der hellenistischen Reiche ins Imperium Romanum 30 v.Chr.\n</p>\n<p>\nDas antike Griechenland hat die Entwicklung der europäischen Zivilisation\nmaßgeblich mitgeprägt.\n</p>\n" 
+        }
+    ]
+   
+}
