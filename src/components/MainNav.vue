@@ -57,8 +57,7 @@ const route = useRoute()
         <span class="flex-nowrap font-semibold">
           <span class="mr-2 text-sm uppercase">Geschichte</span>
           <span>
-            {{ historyStore.currentStep }} von
-            {{ historyStore.sections.length }}
+            {{ historyStore.currentStep }} / {{ historyStore.sections.length }}
           </span>
         </span>
         <button
@@ -132,7 +131,7 @@ const route = useRoute()
         <span class="flex-nowrap font-semibold">
           <span class="mr-2 text-sm uppercase">Kunst</span>
           <span>
-            {{ artStore.currentStep }} von {{ artStore.sections.length }}
+            {{ artStore.currentStep }} / {{ artStore.sections.length }}
           </span>
         </span>
         <button
