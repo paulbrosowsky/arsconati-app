@@ -1,4 +1,6 @@
 <script setup>
+import { useSlots } from 'vue'
+
 defineProps({
   bgImage: {
     type: String,
@@ -7,7 +9,10 @@ defineProps({
 })
 </script>
 <template>
-  <div class="aspect-w-1 relative -mb-5 h-[500px] w-full">
+  <div
+    class="aspect-w-1 relative -mb-5 -mt-14 h-screen w-full"
+    :class="{ 'mt-0 h-[500px]': !!$slots.content }"
+  >
     <slot name="searchIndex"></slot>
     <img class="object-cover" :src="bgImage" alt="" />
     <div class="relative">
@@ -23,9 +28,9 @@ defineProps({
   </div>
 
   <div class="relative z-10 rounded-3xl bg-white pt-6 pb-32">
-    <nav class="absolute -top-5 right-6">
+    <nav class="absolute -top-5 right-6" v-if="$slots.nav">
       <slot name="nav"></slot>
     </nav>
-    <slot></slot>
+    <slot name="content"></slot>
   </div>
 </template>

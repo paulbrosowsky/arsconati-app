@@ -15,21 +15,22 @@ const section = computed(() => store.currentSection())
     <template #subtitle>
       {{ store.currentSection?.subtitle }}
     </template>
-
-    <section
-      v-for="(content, index) in store.currentSection?.contents"
-      :key="index"
-    >
-      <div
-        v-if="content?.images"
-        v-for="(image, index) in content?.images"
+    <template #content>
+      <section
+        v-for="(content, index) in store.currentSection?.contents"
         :key="index"
-        class="mt-10 p-10 first:mt-0"
       >
-        <img class="rounded-xl shadow-lg" :src="image" />
-      </div>
+        <div
+          v-if="content?.images"
+          v-for="(image, index) in content?.images"
+          :key="index"
+          class="mt-10 p-10 first:mt-0"
+        >
+          <img class="rounded-xl shadow-lg" :src="image" />
+        </div>
 
-      <ContentText class="mb-10" :content="content?.body" />
-    </section>
+        <ContentText class="mb-10" :content="content?.body" />
+      </section>
+    </template>
   </PageLayout>
 </template>

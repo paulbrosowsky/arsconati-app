@@ -1,0 +1,14 @@
+{
+    "id": 70, 
+    "step": 8,
+    "title": "Sammlervitrine",
+    "subtitle": "Once upon a time...",
+    "titleImage": "/images/geschichte_sammlervitrine.jpg",
+    "audio": "",
+    "contents": [
+        { 
+            "body": "<h2>Ein paar interessante Entdeckungen?</h2>\n<ul>\n    <li>\n        Mit unglaublicher Präzision bemalte Zinnsoldaten.\n    </li>\n    <li>\n        Napoleon: dessen Zeitgenossen Beethoven, Goethe, Schiller.\n    </li>\n    <li>\n        Napoleon: Ägypten Feldzug, militärisch eine Niederlage, aber ...\n    </li>\n    <li>\n        Eine originale Krankmeldung eines französischen Sodaten, damit er nicht mit zum Russland Feldzug mußte.\n    </li>\n    <li>\n        Fayencen des 17. und 18. Jahrhunderts.\n    </li>\n    <li>\n    Nautica\n    </li>\n</ul>\n\n\n" 
+        }
+    ]
+   
+}

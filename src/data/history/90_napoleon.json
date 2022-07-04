@@ -1,0 +1,14 @@
+{
+    "id": 90, 
+    "step": 10,
+    "title": "Epoche Napoleon",
+    "subtitle": "1799, von der Französischen Revolution bis Waterloo 1815",
+    "titleImage": "/images/geschichte_napoleon.jpg",
+    "audio": "",
+    "contents": [
+        { 
+            "body": "<h2>Napoleon Bonaparte, Kaiser Napoleon I</h2>\n\n<p>\nNapoleon- Soldat der Revolution, Feldherr, 1. Konsul und ab 1805 Kaiser der Franzosen.\n</p>\n<p>\nNapoleon, ein Egomane, Autokrat, Feldherr, Stratege, auch Reformer (Abschaffung\nder Sklaverei in den Kolonien) und Jurist (Code Civil)...\n</p>\n<p>\nNapoleon hat wie kein Zweiter die Denkweisen und Charaktere Frankreichs bis heute beeinflusst.\n</p>\n<h4>\nFrage: wie groß war Napoleon?\n</h4>\n\n" 
+        }
+    ]
+   
+}

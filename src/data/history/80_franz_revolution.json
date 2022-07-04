@@ -1,0 +1,14 @@
+{
+    "id": 80, 
+    "step": 9,
+    "title": "Französische Revolution",
+    "subtitle": "1789 bis 1799",
+    "titleImage": "/images/geschichte_fraz_revolution.jpg",
+    "audio": "",
+    "contents": [
+        { 
+            "body": "<h2>Eines der folgenreichsten Ereignisse der Neuzeit</h2>\n<h4>3 Stände</h4>\n<ul>\n    <li>\n        Klerus- Papst, Äbte, Bischöfe, Mönche\n    </li>\n    <li>\n        Adel- Herzöge, Grafen, Ritter\n    </li>\n    <li>\n        Volk-Bauern, Handwerker, Stadtbürger\n    </li>\n</ul>\n<h4>\nUrsachen der Französischen Revolution\n</h4>\n<ul>\n    <li>\n        Ungerechte Lastenverteilung der Stände\n    </li>\n    <li>\n        Politische Machtlosigkeit des 3. Standes\n    </li>\n    <li>\n        Wirtschaftschaftskrise Frankreichs, Hungersnot\n    </li>\n    <li>\n        Geist der Aufklärung\n    </li>\n</ul>\n\n<p>\nEnde der Revolution war der Auftritt des Artillerie Kommandeurs Bonaparte.\n</p>\n\n\n" 
+        }
+    ]
+   
+}

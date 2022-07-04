@@ -1,0 +1,14 @@
+{
+    "id": 120, 
+    "step": 13,
+    "title": "Deutsches Kaiserreich",
+    "subtitle": "Phase 1871 bis 1918",
+    "titleImage": "/images/geschichte_keiserreich.jpg",
+    "audio": "",
+    "contents": [
+        { 
+            "body": "<h2>Reichsgründung</h2>\n<h4>Wilhelm I wird erster Deutscher Kaiser</h4>\n<p>\nDer Friede mit Frankreich (1871) beendete den deutsch französischen\nKrieg. Zum deutschen Kaiserreich gehörten 25 Bundesstaaten, 3\nHansestädte sowie Elsaß- Lothringen.\n</p>\n<h4>4 Zeitabschnitte</h4>\n<ul>\n    <li>\n        Gründung\n    </li>\n    <li>\n        Otto von Bismarck (Innen- und Außenpolitik)\n    </li>\n    <li>\n        Industrialisierung\n    </li>\n    <li>\n        Wilhelm II\n    </li>\n</ul>\n<p>\nWilhelm II verfolgte einen imperialistischen Kurs, der schließlich im\nErsten Weltkrieg und Ende der Kaiserherrschaft mündete.\n</p>\n\n\n" 
+        }
+    ]
+   
+}

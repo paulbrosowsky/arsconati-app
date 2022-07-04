@@ -36,38 +36,43 @@ const section = computed(() => store.currentSection())
         </button>
       </div>
     </template> -->
-
-    <section
-      class="mt-10"
-      v-for="(content, index) in store.currentSection?.contents"
-      :key="index"
+    <template
+      #content
+      v-if="store.currentSection?.contents || store.sectionExhibits.length"
     >
-      <div
-        v-if="content?.images"
-        v-for="(image, index) in content?.images"
+      <section
+        v-if="store.currentSection?.contents"
+        class="mt-10"
+        v-for="(content, index) in store.currentSection?.contents"
         :key="index"
-        class="mt-10 p-10 first:mt-0"
       >
-        <img class="rounded-xl shadow-lg" :src="image" />
-      </div>
+        <div
+          v-if="content?.images"
+          v-for="(image, index) in content?.images"
+          :key="index"
+          class="mt-10 p-10 first:mt-0"
+        >
+          <img class="rounded-xl shadow-lg" :src="image" />
+        </div>
 
-      <ContentText class="mb-10" :content="content?.body" />
-    </section>
+        <ContentText class="mb-10" :content="content?.body" />
+      </section>
 
-    <section
-      class="mt-10 bg-gray-100 px-4 py-10"
-      v-if="store.sectionExhibits.length"
-    >
-      <h2 class="mb-5 text-center font-heading text-2xl font-medium">
-        Exponate
-      </h2>
-      <div class="flex w-full snap-x overflow-x-auto scroll-smooth">
-        <ExhibitCard
-          class="mx-2 shrink-0 snap-center"
-          v-for="exhibit in store.sectionExhibits"
-          :exhibit="exhibit"
-        ></ExhibitCard>
-      </div>
-    </section>
+      <section
+        class="mt-10 bg-gray-100 px-4 py-10"
+        v-if="store.sectionExhibits.length"
+      >
+        <h2 class="mb-5 text-center font-heading text-2xl font-medium">
+          Exponate
+        </h2>
+        <div class="flex w-full snap-x overflow-x-auto scroll-smooth">
+          <ExhibitCard
+            class="mx-2 shrink-0 snap-center"
+            v-for="exhibit in store.sectionExhibits"
+            :exhibit="exhibit"
+          ></ExhibitCard>
+        </div>
+      </section>
+    </template>
   </PageLayout>
 </template>
