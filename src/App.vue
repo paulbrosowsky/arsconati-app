@@ -1,22 +1,45 @@
 <script setup>
-import { onMounted } from 'vue'
-import { RouterView } from 'vue-router'
+import { onMounted, ref } from 'vue'
+import { RouterView, useRoute, useRouter } from 'vue-router'
 import { useStore } from '@/stores/mainStore'
 import { useHistoryStore } from '@/stores/historyStore'
 import { useArtStore } from '@/stores/artStore'
+import Cookies from 'js-cookie'
 import MainNav from '@/components/MainNav.vue'
+import CookieBanner from './components/CookieBanner.vue'
+
+const route = useRoute()
+const router = useRouter()
 
 const store = useStore()
 const historyStore = useHistoryStore()
 const artStore = useArtStore()
 
-onMounted(() => {
-  historyStore.fetchSections()
-  historyStore.fetchExhibits()
-  historyStore.restoreStep()
+const showCookieBanner = ref(false)
 
-  artStore.fetchSections()
-  artStore.restoreStep()
+function checkAccessToken() {
+  if (Cookies.get('access-token') === import.meta.env.VITE_ACCESS_TOKEN) return
+
+  if (route.query.token === import.meta.env.VITE_ACCESS_TOKEN) {
+    showCookieBanner.value = true
+  } else {
+    router.push({ name: 'forbidden' })
+  }
+}
+
+onMounted(() => {
+  router.isReady().then(() => {
+    if (import.meta.env.VITE_USE_QR_CODE === 'true') {
+      checkAccessToken()
+    }
+
+    historyStore.fetchSections()
+    historyStore.fetchExhibits()
+    historyStore.restoreStep()
+
+    artStore.fetchSections()
+    artStore.restoreStep()
+  })
 })
 </script>
 
@@ -58,5 +81,12 @@ onMounted(() => {
     </RouterView>
   </main>
 
-  <MainNav class="fixed bottom-0 z-50"></MainNav>
+  <MainNav
+    class="fixed bottom-0 z-30"
+    v-if="$route.name !== 'forbidden'"
+  ></MainNav>
+  <CookieBanner
+    v-if="showCookieBanner"
+    @submit="showCookieBanner = false"
+  ></CookieBanner>
 </template>

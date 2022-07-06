@@ -8,7 +8,10 @@ export const useStore = defineStore('main', {
   actions: {
     setLoading() {
       this.loading = true
-      setTimeout(() => (this.loading = false), 250)
+      setTimeout(
+        () => (this.loading = false),
+        import.meta.env.VITE_LOADING_TIME
+      )
     },
   },
 })

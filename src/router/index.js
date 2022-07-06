@@ -4,9 +4,10 @@ import HistoryView from '@/views/HistoryView.vue'
 import SearchView from '@/views/SearchView.vue'
 import HomeView from '@/views/HomeView.vue'
 import ExhibitView from '@/views/ExhibitView.vue'
+import ForbiddenView from '@/views/ForbiddenView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/exhibit/:id',
       name: 'exhibit',
       component: ExhibitView,
+    },
+    {
+      path: '/forbidden',
+      name: 'forbidden',
+      component: ForbiddenView,
     },
   ],
 })
