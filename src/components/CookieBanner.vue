@@ -15,7 +15,7 @@ function setCookie() {
     class="fixed left-0 top-0 bottom-0 right-0 z-30 flex items-center justify-center bg-indigo-900/50 p-6 backdrop-blur-sm"
   >
     <div
-      class="z-20 flex h-2/3 w-full flex-col justify-center rounded-2xl bg-white px-6 py-10 shadow-xl"
+      class="z-20 flex h-4/5 w-full flex-col justify-center rounded-2xl bg-white px-6 py-10 shadow-xl"
     >
       <h1 class="mb-10 text-center text-2xl font-semibold text-gray-600">
         🍪 Auch wir verwenden Cookies!
